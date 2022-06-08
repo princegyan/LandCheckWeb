@@ -8,7 +8,7 @@ function ModalSignIn() {
   
 
         <button
-          className="place-content-center     bg-[#FED501] text-[#060646] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="  place-self-end   bg-[#FED501] text-[#060646] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowModal(true)}
         >
