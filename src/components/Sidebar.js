@@ -32,10 +32,10 @@ const Sidebar = () => {
           showSidebar ? "translate-x-0 " : "translate-x-full"
         }`}
       >
-          <div className="ml-0">
+          <div className="ml-0 bg-[#]">
   <a href="#" className="flex items-center pl-2.5 mb-5">
     <img src="https://cdn.dribbble.com/users/24078/screenshots/15522433/media/e92e58ec9d338a234945ae3d3ffd5be3.jpg?compress=1&resize=400x300&vertical=top" className="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
-    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">LandCheck™</span>
+    <span className=" self-center text-xl font-semibold whitespace-nowrap dark:text-white">LandCheck™</span>
   </a>
   <ul className="space-y-2">
       

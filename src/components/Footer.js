@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="p-4 bg-[#060646] sm:p-6 dark:bg-transparent absolute inset-x-0 bottom-0 text-center">
+    <footer className="p-4 bg-[#060646] sm:p-6 dark:bg-transparent  inset-x-0 bottom-0 text-center lg:fixed">
   
   <hr className="my-6 border-[#FED501] sm:mx-auto dark:border-gray-700 lg:my-8" />
   <div className="sm:flex sm:items-center sm:justify-between ">
