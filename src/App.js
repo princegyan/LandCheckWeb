@@ -1,6 +1,5 @@
 import './App.css';
 import Footer from './components/Footer';
-import ModalSignIn from './components/ModalSignIn';
 import Sidebar from './components/Sidebar';
 import Tabtwo from './prepcomponents/Tabtwo';
 
