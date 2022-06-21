@@ -58,9 +58,9 @@ export default function Services() {
           {features.map((feature) => (
             <div key={feature.name}>
               <dt className=''onClick={() => setShowModal(true)}>
-                <div className='flex ml-20 justify-around items-center  h-40 w-40 rounded-md cursor-pointer text-white' onClose={setShowModal}>
+                <div className='flex  justify-around items-center   rounded-md cursor-pointer ' onClose={setShowModal}>
                   {/* <feature.icon className='h-30 w-30' aria-hidden='true' /> */}
-                  <img src={feature.icon} alt={feature.name}/>
+                  <img className='h-40 w-40 sm:h-25 w-25' src={feature.icon} alt={feature.name}/>
                 </div>
                 <p className='text-center text-3xl  ml-7 font-medium cursor-pointer text-[#060646]'>{feature.name}</p>
               </dt>
