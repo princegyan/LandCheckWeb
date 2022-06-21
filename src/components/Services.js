@@ -1,3 +1,6 @@
+
+/* This example requires Tailwind CSS v2.0+ */
+import SignIn from './SignIn';
 import React, { useEffect, useRef } from 'react';
 
 
@@ -21,20 +24,54 @@ let useClickOutside = (handler) => {
   return domNode;
 };
 
-function SignIn() {
-  const [ setShowModal] = React.useState(false);
+
+const features = [
+  {
+    name: 'Land Search',
+    icon: 'LandSearch.png',
+  },
+  {
+    name: 'Land Verification',
+    icon: 'LandVerification.png',
+  },
+  {
+    name: 'Land Valuation',
+    icon: 'LandValuation.png',
+  },
+  {
+    name: 'Land Monitoring',
+    icon: 'LandMonitoring.png',
+  },
+  
+]
+
+export default function Services() {
+  const [showModal, setShowModal] = React.useState(false);
   let domNode = useClickOutside(() => {
     setShowModal(false);
   });
+  
   return (
-    
-    <div>
-                 <>
+    <div className='py-12 ' >
+      <div className='max-w-xl mx-auto px-4 sm:px-4 lg:max-w-7xl lg:px-8'>
+        <dl className='space-y-10 sm: grid-cols-2 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-2'>
+          {features.map((feature) => (
+            <div key={feature.name}>
+              <dt className=''onClick={() => setShowModal(true)}>
+                <div className='flex ml-20 justify-around items-center  h-40 w-40 rounded-md cursor-pointer text-white' onClose={setShowModal}>
+                  {/* <feature.icon className='h-30 w-30' aria-hidden='true' /> */}
+                  <img src={feature.icon} alt={feature.name}/>
+                </div>
+                <p className='text-center text-3xl  ml-7 font-medium cursor-pointer text-[#060646]'>{feature.name}</p>
+              </dt>
+              {showModal ? (
+                <div >
+                  <>
                     <div
-                      ref={domNode}
+                      
                       className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'
                     >
-                      <div className='lg:w-[35vw] relative w-auto my-6 mx-auto max-w-3xl'>
+                      <div ref={domNode} className='lg:w-[35vw] relative w-auto my-6 mx-auto max-w-3xl'>
                         {/*content*/}
                         <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
                           {/*header*/}
@@ -138,11 +175,16 @@ function SignIn() {
                     </div>
                     <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
                   </>
-                
-               
-               
+                </div>                  
+              ) : null}
+
+            </div>
+          ))}
+        </dl>
+      </div>
     </div>
   )
 }
 
-export default SignIn
+
+
